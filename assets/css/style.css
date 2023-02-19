@@ -1,0 +1,64 @@
+/* text yang ada di foto tengah */
+.info-panel {
+  width: 60rem;
+  height: 150px;
+  font-size: 19px;
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 18px;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+  margin-left: 4rem;
+}
+
+.Check {
+  margin-top: 30px;
+  margin-left: 5.4rem;
+}
+
+.tulisan {
+  margin-top: -400px;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+}
+.pesan {
+  position: absolute;
+  margin-left: 800px;
+  margin-top: -40px;
+}
+
+.form-control1 {
+  border: black;
+  margin-left: 2rem;
+}
+.heading {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+}
+.card {
+  flex-direction: row;
+}
+.card img {
+  width: 30%;
+}
+/* DESKTOP VERSION*/
+/* @media (min-width: 992px) {
+  .nav-link {
+    text-transform: uppercase;
+    margin-right: 5px;
+  }
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 3px solid #00b359;
+    width: 50%;
+    margin: auto;
+    margin-bottom: -8px;
+  }
+  .tulisan {
+    font-size: 80px;
+  }
+} */
