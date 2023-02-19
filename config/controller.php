@@ -1,4 +1,0 @@
-<?php
-// fungsi mrnsmpilkan data
-
-?>
