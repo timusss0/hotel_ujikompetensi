@@ -1,5 +1,5 @@
 <?php
-include 'layout/header.php';
+include './layout/header.php';
 
 if (isset($_POST['pesan'])) {
   if (create_pesan($_POST) > 0) {
@@ -20,8 +20,8 @@ function create_pesan($post)
 
   global $conn;
 
-  $checkin   = $post['out'];
-  $checkout  = $post['in'];
+  $checkin   = $post['in'];
+  $checkout  = $post['out'];
   $jumlah    = $post['jmlh'];
   $nama      = $post['nama'];
   $email      = $post['email'];
@@ -29,13 +29,12 @@ function create_pesan($post)
   $nama_tamu = $post['nama_tamu'];
   $tipe      = $post['Tipe'];
 
-  $query = "INSERT INTO pesan VALUES ('$checkin' , '$checkout' , '$jumlah' , '$nama', '$email' , '$nohp' , '$nama_tamu' , '$tipe')";
+  $query = "INSERT INTO pesan VALUES ('$checkin' , '$checkout' , '$jumlah' , '$nama', '$email' , '$nohp' , '$nama_tamu' , '$tipe' , '1')";
 
   mysqli_query($conn, $query);
 
   return mysqli_affected_rows($conn);
 }
-
 
 
 ?>
@@ -55,12 +54,11 @@ function create_pesan($post)
 <img src="assets/img/p.jpg" width="100%" style="filter: brightness(70%)" />
 
 
-
 <div class="container">
   <form action="" method="post" class="row justify-content-center py-1">
     <div class="col-md-3">
       <label for="ci" class="mt-3">Check in</label>
-      <input type="date" class="form-control" name="in" id="out" />
+      <input type="date" class="form-control" name="in" id="in" />
     </div>
     <div class="col-md-3">
       <label for="co" class="mt-3">Check out</label>
@@ -184,5 +182,5 @@ function create_pesan($post)
 </div>
 
 <?php
-include 'layout/footer.php';
+include './layout/footer.php';
 ?>

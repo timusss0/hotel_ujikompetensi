@@ -1,5 +1,5 @@
-<?php include 'layout/header1.php';
-include 'config/database.php';
+<?php include 'header1.php';
+include '../config/database.php';
 
 $fasiliitas_kamar = SELECT("SELECT * FROM fasilitas_kamar ORDER BY no_kamar DESC");
 
@@ -364,4 +364,4 @@ function update_FK($post)
 </div>
 
 <!-- /.content-wrapper -->
-<?php include 'layout/footer1.php'; ?>
+<?php include 'footer1.php'; ?>

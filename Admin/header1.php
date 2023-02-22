@@ -1,4 +1,4 @@
-<?php include 'config/app.php';
+<?php include '../config/app.php';
 function select($query)
 {
   global $conn;
@@ -27,22 +27,22 @@ function select($query)
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="assets1/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="assets1/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="assets1/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="assets1/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../assets1/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="assets1/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 
   <!-- DataTables -->
-  <link rel="stylesheet" href="assets1/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets1/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets1/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../assets1/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -88,41 +88,24 @@ function select($query)
             <li class="nav-header">Administrasi Hotel</li>
 
             <li class="nav-item">
-              <a href="" class="nav-link">
-                <i class="nav-icon fas fa-list"></i>
-                <p>
-                  Kamar
-                  <i class="fas fa-angle-left right"></i>
-                </p>
+
+
+            <li class="nav-item">
+              <a href="data_kamar.php" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>Data Kamar</p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="data_kamar.php" class="nav-link">
-                    <i class="nav-icon fas fa-book"></i>
-                    <p>Data Kamar</p>
-                  </a>
-                </li>
-              </ul>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="fasilitas_kamar.php" class="nav-link">
-                    <i class="nav-icon fas fa-door-closed"></i>
-                    <p>Fasilitas Kamar</p>
-                  </a>
-                </li>
-              </ul>
             </li>
 
 
             <li class="nav-item">
-              <a href="fasilitas_umum.php" class="nav-link">
-                <i class="nav-icon fas fa-building"></i>
-                <p>
-                  Fasilitas Publik
-                </p>
+              <a href="fasilitas_kamar.php" class="nav-link">
+                <i class="nav-icon fas fa-door-closed"></i>
+                <p>Fasilitas Kamar</p>
               </a>
             </li>
 
+            </li>
             <li class="nav-item">
               <a href="login.php" onclick="return confirm('Yakin ingin keluar?')" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>

@@ -1,6 +1,24 @@
 <?php
 
-include 'config/app.php';
+include '../config/app.php';
+
+
+
+function select($query)
+{
+  global $conn;
+
+  $result = mysqli_query($conn, $query);
+
+  $rows = [];
+
+  while ($row = mysqli_fetch_assoc($result)) {
+    $rows[] = $row;
+  }
+
+  return $rows;
+}
+
 //menerima id kamar yang dipilih pengguna
 $id_kamar = (int)$_GET['no_kamar'];
 if (delete_kamar($id_kamar) > 0) {
@@ -18,10 +36,6 @@ if (delete_kamar($id_kamar) > 0) {
 function delete_kamar($id_kamar)
 {
     global $conn;
-
-    // ambil foto sesuai data yang dipilih
-    $foto = select("SELECT * FROM data_kamar WHERE no_kamar = $id_kamar")[0];
-    unlink("assets/img/" . $foto['foto']);
 
     //query hapus data siswa
     $query = "DELETE FROM data_kamar WHERE no_kamar = $id_kamar";

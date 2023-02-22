@@ -1,5 +1,5 @@
-<?php include 'layout/header1.php';
-include 'config/database.php';
+<?php include 'header1.php';
+include '../config/database.php';
 
 
 

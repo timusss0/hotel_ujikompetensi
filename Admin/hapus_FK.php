@@ -1,6 +1,6 @@
 <?php
 
-include 'config/app.php';
+include '../config/app.php';
 //menerima id kamar yang dipilih pengguna
 $id_kamar = (int)$_GET['no_kamar'];
 if (delete_FK($id_kamar) > 0) {

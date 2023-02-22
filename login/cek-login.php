@@ -11,9 +11,9 @@ $result = mysqli_query($conn, $sql);
 if ($result->num_rows > 0) {
     $row = mysqli_fetch_assoc($result);
     if ($row['id_level'] == 1) {
-        header("location:../admin.php");
+        header("location:../Admin/admin.php");
     } elseif ($row['id_level'] == 2) {
-        header('location:../resepsionis.php');
+        header('location:../Resepsionis/resepsionis.php');
     } else {
         echo "<script>alert('anda tidak memiliki hak akses')
           document.location='login.php'</script>";
